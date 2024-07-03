@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .ser {
+            min-width: 33.33%;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        .ser img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .ser p {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: white;
+        }
+        .carousel-control-prev {
+            left: 10px;
+        }
+        .carousel-control-next {
+            right: 10px;
+        }
+        @media (max-width: 768px) {
+            .ser {
+                min-width: 50%;
+            }
+        }
+        @media (max-width: 576px) {
+            .ser {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const track = document.querySelector('.carousel-track');
+            const nextButton = document.getElementById('next');
+            const prevButton = document.getElementById('prev');
+            const slides = Array.from(track.children);
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            let currentIndex = 1; // Start from the real first slide
+
+            const setSlidePosition = (slide, index) => {
+                slide.style.left = slideWidth * index + 'px';
+            };
+
+            slides.forEach(setSlidePosition);
+
+            const moveToSlide = (track, currentSlide, targetSlide) => {
+                track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+                currentSlide.classList.remove('current-slide');
+                targetSlide.classList.add('current-slide');
+            };
+
+            const updateSlidePosition = () => {
+                track.style.transition = 'none';
+                moveToSlide(track, track.querySelector('.current-slide'), slides[currentIndex]);
+                setTimeout(() => track.style.transition = 'transform 0.5s ease', 50);
+            };
+
+            nextButton.addEventListener('click', e => {
+                const currentSlide = track.querySelector('.current-slide');
+                let nextSlide = currentSlide.nextElementSibling;
+
+                if (nextSlide) {
+                    currentIndex++;
+                    moveToSlide(track, currentSlide, nextSlide);
+
+                    if (nextSlide.nextElementSibling === null) {
+                        currentIndex = 1; // Loop back to the real first slide
+                        setTimeout(updateSlidePosition, 500);
+                    }
+                }
+            });
+
+            prevButton.addEventListener('click', e => {
+                const currentSlide = track.querySelector('.current-slide');
+                let prevSlide = currentSlide.previousElementSibling;
+
+                if (prevSlide) {
+                    currentIndex--;
+                    moveToSlide(track, currentSlide, prevSlide);
+
+                    if (prevSlide.previousElementSibling === null) {
+                        currentIndex = slides.length - 2; // Loop back to the real last slide
+                        setTimeout(updateSlidePosition, 500);
+                    }
+                }
+            });
+
+            slides[currentIndex].classList.add('current-slide'); // Set the initial current slide
+            track.style.transform = 'translateX(-' + slides[currentIndex].style.left + ')'; // Adjust initial position
+        });
+    </script>
+</body>
+</html>

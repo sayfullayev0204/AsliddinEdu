@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asliddin Edu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <!-- <img src="/media/fon.png"> -->
+                <div>
+                    <span>Asliddin Edu</span>
+                </div>
+            </div>
+            <div class="a">
+                <span><i class="fas fa-user" data-toggle="modal" data-target="#myModal" style="color: #555a62; font-size: 30px;"></i></span>
+            </div>
+            <ul>
+                <li><a href="#home" >Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content" style="font-family: Inter,sans-serif; color: black;">
+            <div style="display: flex; gap: 10px;">
+                <h1 >Welcome to </h1>
+                <h1 style="color: #FFC947;"> Asliddin Edu</h1>
+            </div>
+            <p>Your journey to becoming a tech professional starts here.</p>
+        </div>
+        <div class="ss">
+            <img class="s" src="https://magistr.edu.uz//_nuxt/img/main.371f92c.png" style="max-width: 500px; text-align: center; ">
+        </div>
+    </section>
+
+    <section id="about" class="content-section">
+        <div class="about">
+            <div>
+                <h2>About Us</h2>
+                <p>Asliddin Edu is a leading online platform offering tech courses in Uzbek. Our mission is to make high-quality education accessible to everyone.</p>
+            </div>
+            <div>
+                <img src="/media/about-2.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="content-section">
+        <h2>Our Certificates</h2>
+        <div class="certificate-container">
+            <div class="certificate-list" >
+                <div class="certificate-item">
+                    <img src="/media/iel.jpg" alt="">
+                    <p>Nurillayev Bekzod</p>
+                    <p>OVERALL: 6</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="/media/iel.jpg" alt="">
+                    <p>Nurillayev Bekzod</p>
+                    <p>OVERALL: 6</p>
+                </div>
+                <div class="certificate-item">
+                    <img src="/media/iel.jpg" alt="">
+                    <p>Nurillayev Bekzod</p>
+                    <p>OVERALL: 6</p>
+                </div>
+                <!-- Add more certificate items as needed -->
+            </div>
+        </div>
+    </section>
+
+
+    <section id="courses" class="content-section" style="background-color: rgb(103, 140, 235);">
+        <h2>Our Courses</h2>
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Clone of the last slide to create a seamless effect -->
+                    <div class="ser">
+                        s
+                    </div>
+                    <div class="ser">
+                        <img src="media/about-2.jpg" alt="Div 1" class="img-fluid">
+                        <p>English</p>
+                        <div style="display: flex; gap: 10px;">
+                            <p style="color: #555a62;">with</p>
+                            <h2 style="color: #FFC947;">Jonibek</p>
+                        </div>
+                    </div>
+                    <div class="ser">
+                        <img src="media/about-2.jpg" alt="Div 2" class="img-fluid">
+                        <p>Math</p>
+                        <div style="display: flex; gap: 10px;">
+                            <p style="color: #555a62;">with</p>
+                            <h2 style="color: #FFC947;">Asliddin</p>
+                        </div>
+                    </div>
+                    <!-- Clone of the first slide to create a seamless effect -->
+                    <div class="ser">
+                        <img src="media/about-2.jpg" alt="Div 1 Clone" class="img-fluid">
+                        <p>History</p>
+                        <div style="display: flex; gap: 10px;">
+                            <p style="color: #555a62;">with</p>
+                            <h2 style="color: #FFC947;">Sardor</p>
+                        </div>
+                    </div>
+                    <div class="ser">
+                        s
+                    </div>
+                </div>
+                <button class="carousel-control-prev" role="button" id="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" role="button" id="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
+            </div>
+        </div>
+        <div>
+            <a href="#home" class="btn btn-primary" style="background-color: #FFC947; color: black;">Load More</a>
+        </div>
+    </section>
+
+
+    <section id="contact" class="content-section">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="map-container">
+                <iframe
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7003.202262780493!2d65.34132510453506!3d39.10480636524015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4ef1fc9db1a8eb%3A0x7c8b3ed6276003ab!2sCharxpalak!5e0!3m2!1sru!2s!4v1719750716188!5m2!1sru!2s"
+                 width="100%" height="450" style="border:1px solid; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="contact-form-container">
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myModalLabel">Modal Sarlavha</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: red;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Bu yerda modal oynaning kontenti joylashadi.
+                </div>
+                <div style="text-align: center;">
+                    <img src="/media/about-2.jpg" style="max-width: 300px; border-radius: 50%; text-align: center;">
+                    <p>name</p>
+                    <p>lastname</p>
+                </div>
+                <div class="modal-body">
+                    <div class="social">
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 10px; padding: 10px;">
+                    <div class="login">
+                        <span><i class="fas fa-sign-in-alt" data-toggle="modal" data-target="#myLogin" style="color: rgb(60, 243, 9); font-size: 30px;"> Login</i></span>
+                    </div>
+                    <div class="register">
+                        <span><i class="fas fa-user" data-toggle="modal" data-target="#myRegister" style="color: rgb(60, 243, 9); font-size: 30px;"> Register</i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="myLogin" tabindex="-1" aria-labelledby="myloginLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myloginLabel">Login Sarlavha</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: red;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" name="username" placeholder="Username" class="form-control mb-2">
+                    <input type="password" name="password" placeholder="Password" class="form-control mb-2">
+                    <button class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="myRegister" tabindex="-1" aria-labelledby="myRegisterLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="myRegisterLabel">Register Sarlavha</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" style="color: red;">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" name="name" placeholder="Name" class="form-control mb-2">
+                    <input type="text" name="lastname" placeholder="Lastname" class="form-control mb-2">
+                    <input type="text" name="username" placeholder="Username" class="form-control mb-2">
+                    <input type="password" name="password" placeholder="Password" class="form-control mb-2">
+                    <button class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Asliddin Edu</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-footer">
+        <a href="#home"><i class="fas fa-home"></i></a>
+        <a href="#courses"><i class="fas fa-book"></i></a>
+        <a href="#about"><i class="fas fa-info-circle"></i></a>
+        <a href="#contact"><i class="fas fa-envelope"></i></a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const track = document.querySelector('.carousel-track');
+            const nextButton = document.getElementById('next');
+            const prevButton = document.getElementById('prev');
+            const slides = Array.from(track.children);
+            const slideWidth = slides[0].getBoundingClientRect().width;
+            let currentIndex = 1; // Start from the real first slide
+
+            const setSlidePosition = (slide, index) => {
+                slide.style.left = slideWidth * index + 'px';
+            };
+
+            slides.forEach(setSlidePosition);
+
+            const moveToSlide = (track, currentSlide, targetSlide) => {
+                track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+                currentSlide.classList.remove('current-slide');
+                targetSlide.classList.add('current-slide');
+            };
+
+            const updateSlidePosition = () => {
+                track.style.transition = 'none';
+                moveToSlide(track, track.querySelector('.current-slide'), slides[currentIndex]);
+                setTimeout(() => track.style.transition = 'transform 0.5s ease', 50);
+            };
+
+            nextButton.addEventListener('click', e => {
+                const currentSlide = track.querySelector('.current-slide');
+                let nextSlide = currentSlide.nextElementSibling;
+
+                if (nextSlide) {
+                    currentIndex++;
+                    moveToSlide(track, currentSlide, nextSlide);
+
+                    if (nextSlide.nextElementSibling === null) {
+                        currentIndex = 1; // Loop back to the real first slide
+                        setTimeout(updateSlidePosition, 500);
+                    }
+                }
+            });
+
+            prevButton.addEventListener('click', e => {
+                const currentSlide = track.querySelector('.current-slide');
+                let prevSlide = currentSlide.previousElementSibling;
+
+                if (prevSlide) {
+                    currentIndex--;
+                    moveToSlide(track, currentSlide, prevSlide);
+
+                    if (prevSlide.previousElementSibling === null) {
+                        currentIndex = slides.length - 2; // Loop back to the real last slide
+                        setTimeout(updateSlidePosition, 500);
+                    }
+                }
+            });
+
+            slides[currentIndex].classList.add('current-slide'); // Set the initial current slide
+            track.style.transform = 'translateX(-' + slides[currentIndex].style.left + ')'; // Adjust initial position
+        });
+        // JavaScript to handle the opening and closing of modals
+        $(document).ready(function(){
+            $('#myModal').on('click', '.fa-sign-in-alt', function(){
+                $('#myModal').modal('hide');
+                $('#myLogin').modal('show');
+            });
+            $('#myModal').on('click', '.fa-user', function(){
+                $('#myModal').modal('hide');
+                $('#myRegister').modal('show');
+            });
+
+            // Close button in login modal
+            $('#myLogin .close').on('click', function(){
+                $('#myLogin').modal('hide');
+                $('#myModal').modal('show');
+            });
+
+            // Close button in register modal
+            $('#myRegister .close').on('click', function(){
+                $('#myRegister').modal('hide');
+                $('#myModal').modal('show');
+            });
+        });
+
+        // JavaScript to handle the opening and closing of modals
+        $(document).ready(function(){
+            $('#myModal').on('click', '.fa-sign-in-alt', function(){
+                $('#myModal').modal('hide');
+                $('#myLogin').modal('show');
+            });
+            $('#myModal').on('click', '.fa-user', function(){
+                $('#myModal').modal('hide');
+                $('#myRegister').modal('show');
+            });
+
+            // Close button in login modal
+            $('#myLogin .close').on('click', function(){
+                $('#myLogin').modal('hide');
+                $('#myModal').modal('show');
+            });
+
+            // Close button in register modal
+            $('#myRegister .close').on('click', function(){
+                $('#myRegister').modal('hide');
+                $('#myModal').modal('show');
+            });
+        });
+    </script>
+</body>
+</html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const newPageSection = document.getElementById('new-page');
+    const imageElement = document.querySelector('.a img');
+    const closeNewPageButton = document.getElementById('close-new-page');
+
+    imageElement.addEventListener('click', function() {
+        newPageSection.classList.remove('hidden');
+    });
+
+    closeNewPageButton.addEventListener('click', function() {
+        newPageSection.classList.add('hidden');
+    });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const newPageSection = document.getElementById('new-page');
+    const imageElement = document.querySelector('.login span');
+    const closeNewPageButton = document.getElementById('close-new-page');
+
+    imageElement.addEventListener('click', function() {
+        newPageSection.classList.remove('hidden');
+    });
+
+    closeNewPageButton.addEventListener('click', function() {
+        newPageSection.classList.add('hidden');
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const certificateList = document.querySelector('.certificate-list');
+    const certificateItems = Array.from(certificateList.children);
+    
+    // Clone each certificate item and append to the end of the list
+    certificateItems.forEach(item => {
+        const clone = item.cloneNode(true);
+        certificateList.appendChild(clone);
+    });
+});
+
+</script>
